@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo Pharma Shippers Conference 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles & Variables */
+        :root {
+            --primary: #026AA7;
+            --secondary: #55C2DA;
+            --accent: #F4B942;
+            --background: #F8F9FB;
+            --text: #222B45;
+            --radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--text);
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e0a42d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(244, 185, 66, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(2, 106, 167, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 0;
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: var(--radius);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius);
+        }
+        
+        .key-points {
+            margin-top: 30px;
+        }
+        
+        .key-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .key-point i {
+            color: var(--accent);
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        /* Agenda Section */
+        .agenda-container {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .agenda-tabs {
+            display: flex;
+            border-bottom: 2px solid var(--background);
+            margin-bottom: 30px;
+        }
+        
+        .agenda-tab {
+            padding: 12px 25px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-weight: 600;
+        }
+        
+        .agenda-tab.active {
+            border-bottom: 3px solid var(--accent);
+            color: var(--primary);
+        }
+        
+        .agenda-content {
+            display: none;
+        }
+        
+        .agenda-content.active {
+            display: block;
+        }
+        
+        .agenda-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--background);
+        }
+        
+        .agenda-time {
+            flex: 0 0 150px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .agenda-details {
+            flex: 1;
+        }
+        
+        /* Speakers Section */
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .speaker-card {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .speaker-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 4px solid var(--secondary);
+        }
+        
+        .speaker-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .speaker-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .speaker-bio-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .speaker-bio-btn:hover {
+            background-color: #025a8f;
+        }
+        
+        /* Sponsors Section */
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .sponsor-card {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .sponsor-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sponsor-card img {
+            max-width: 100%;
+            max-height: 80px;
+        }
+        
+        /* Registration Section */
+        .registration-form {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            font-size: 16px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--background);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 20px 20px;
+            display: none;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-map {
+            height: 300px;
+            background-color: #eee;
+            border-radius: var(--radius);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .hero-cta {
+                justify-content: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .agenda-item {
+                flex-direction: column;
+            }
+            
+            .agenda-time {
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .agenda-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .agenda-tab {
+                flex: 1 0 50%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">Cargo Pharma Shippers</div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#speakers">Speakers</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#registration">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Cargo Pharma Shippers Conference 2025</h1>
+                <p>Innovating Cold Chain Logistics for Pharma</p>
+                <div class="event-details">
+                    <p><i class="fas fa-calendar-alt"></i> March 15-17, 2025</p>
+                    <p><i class="fas fa-map-marker-alt"></i> San Francisco Convention Center</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#registration" class="btn btn-primary">Register Now</a>
+                    <a href="#" class="btn btn-secondary">Download Agenda</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://placehold.co/600x400/026AA7/FFFFFF/png?text=Conference+Image" alt="Cargo Pharma Shippers Conference">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About the Conference</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>The Cargo Pharma Shippers Conference is the premier event for professionals in pharmaceutical logistics and cold chain management. Join industry leaders, innovators, and experts as we explore the latest advancements, regulations, and best practices in pharma shipping.</p>
+                    
+                    <div class="key-points">
+                        <div class="key-point">
+                            <i class="fas fa-network-wired"></i>
+                            <div>
+                                <h3>Networking Opportunities</h3>
+                                <p>Connect with 1000+ professionals from across the industry</p>
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <h3>Innovation Showcase</h3>
+                                <p>Discover cutting-edge technologies and solutions</p>
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <i class="fas fa-file-alt"></i>
+                            <div>
+                                <h3>Compliance & Regulations</h3>
+                                <p>Stay updated on the latest regulatory requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://placehold.co/500x350/55C2DA/FFFFFF/png?text=About+Conference" alt="About Cargo Pharma Shippers Conference">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section id="agenda" class="agenda">
+        <div class="container">
+            <h2>Conference Agenda</h2>
+            <div class="agenda-container">
+                <div class="agenda-tabs">
+                    <div class="agenda-tab active" data-day="day1">Day 1 (March 15)</div>
+                    <div class="agenda-tab" data-day="day2">Day 2 (March 16)</div>
+                    <div class="agenda-tab" data-day="day3">Day 3 (March 17)</div>
+                </div>
+                
+                <div class="agenda-content active" id="day1">
+                    <div class="agenda-item">
+                        <div class="agenda-time">8:30 AM - 9:30 AM</div>
+                        <div class="agenda-details">
+                            <h3>Registration & Welcome Coffee</h3>
+                            <p>Main Lobby</p>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-time">9:30 AM - 10:15 AM</div>
+                        <div class="agenda-details">
+                            <h3>Opening Keynote: Future of Pharma Logistics</h3>
+                            <p>Dr. Emily Johnson, Director of Global Logistics, Pfizer</p>
+                        </div>
+                    </div>
+                    <div class="agenda-item">
+                        <div class="agenda-time">10:30 AM - 12:00 PM</div>
+                        <div class="agenda-details">
+                            <h3>Cold Chain Innovation Panel</h3>
+                            <p>Industry leaders discuss emerging technologies and challenges</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="agenda-content" id="day2">
+                    <!-- Day 2 content would go here -->
+                </div>
+                
+                <div class="agenda-content" id="day3">
+                    <!-- Day 3 content would go here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="speakers">
+        <div class="container">
+            <h2>Featured Speakers</h2>
+            <div class="speakers-grid">
+                <div class="card speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/200x200/026AA7/FFFFFF/png?text=Dr.+Johnson" alt="Dr. Emily Johnson">
+                    </div>
+                    <h3 class="speaker-name">Dr. Emily Johnson</h3>
+                    <p class="speaker-title">Director of Global Logistics, Pfizer</p>
+                    <button class="speaker-bio-btn">View Bio</button>
+                </div>
+                
+                <div class="card speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/200x200/026AA7/FFFFFF/png?text=Michael+Chen" alt="Michael Chen">
+                    </div>
+                    <h3 class="speaker-name">Michael Chen</h3>
+                    <p class="speaker-title">Cold Chain Specialist, Merck</p>
+                    <button class="speaker-bio-btn">View Bio</button>
+                </div>
+                
+                <div class="card speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/200x200/026AA7/FFFFFF/png?text=Sarah+Williams" alt="Sarah Williams">
+                    </div>
+                    <h3 class="speaker-name">Sarah Williams</h3>
+                    <p class="speaker-title">CEO, PharmaCold Solutions</p>
+                    <button class="speaker-bio-btn">View Bio</button>
+                </div>
+                
+                <div class="card speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://placehold.co/200x200/026AA7/FFFFFF/png?text=Robert+Martinez" alt="Robert Martinez">
+                    </div>
+                    <h3 class="speaker-name">Robert Martinez</h3>
+                    <p class="speaker-title">Regulatory Affairs Director, FDA</p>
+                    <button class="speaker-bio-btn">View Bio</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors">
+        <div class="container">
+            <h2>Our Sponsors & Partners</h2>
+            <p>We gratefully acknowledge our sponsors and partners who make this event possible.</p>
+            
+            <div class="sponsors-grid">
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+1" alt="Sponsor 1">
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+2" alt="Sponsor 2">
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+3" alt="Sponsor 3">
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+4" alt="Sponsor 4">
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+5" alt="Sponsor 5">
+                </div>
+                <div class="sponsor-card">
+                    <img src="https://placehold.co/150x80/026AA7/FFFFFF/png?text=Sponsor+6" alt="Sponsor 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="registration">
+        <div class="container">
+            <h2>Register Now</h2>
+            <p>Secure your spot at the premier pharmaceutical logistics event of the year.</p>
+            
+            <div class="registration-form">
+                <form id="conference-registration">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" name="jobTitle" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ticketType">Ticket Type</label>
+                        <select id="ticketType" name="ticketType" required>
+                            <option value="">Select ticket type</option>
+                            <option value="standard">Standard Admission ($499)</option>
+                            <option value="premium">Premium Package ($799)</option>
+                            <option value="vip">VIP Experience ($1,199)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specialRequirements">Special Requirements</label>
+                        <textarea id="specialRequirements" name="specialRequirements" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Complete Registration</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the cancellation policy? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cancellations made 30 days or more before the event will receive a full refund. Cancellations made 15-29 days before the event will receive a 50% refund. Unfortunately, we cannot provide refunds for cancellations made less than 15 days before the event.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is there a group discount? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer group discounts for teams of 5 or more people from the same organization. Please contact our registration team at registration@cargopharmaconference.com for more information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will the sessions be recorded? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all main stage sessions will be recorded and made available to registered attendees for 30 days after the conference. Breakout sessions may not all be recorded, so please check the agenda for details.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What COVID-19 safety measures are in place? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are following all local health guidelines and will implement appropriate safety measures. Specific protocols will be communicated to registered attendees closer to the event date.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions about the conference? Our team is here to help.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> info@cargopharmaconference.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Way, San Francisco, CA 94107</p>
+                    </div>
+                    
+                    <div class="contact-map">
+                        <p>Google Maps Integration Would Appear Here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Cargo Pharma Shippers Conference</h3>
+                    <p>The premier event for pharmaceutical logistics and cold chain management professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#agenda">Agenda</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#registration">Registration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Venue Information</a></li>
+                        <li><a href="#">Travel & Accommodation</a></li>
+                        <li><a href="#">Speaker Guidelines</a></li>
+                        <li><a href="#">Sponsorship Opportunities</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility Statement</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cargo Pharma Shippers Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Agenda tabs functionality
+        const agendaTabs = document.querySelectorAll('.agenda-tab');
+        agendaTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.agenda-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.agenda-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.day).classList.add('active');
+            });
+        });
+        
+        // FAQ accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+        
+        // Form submission (placeholder for Oracle integration)
+        document.getElementById('conference-registration').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Registration form would be submitted to Oracle backend in production.');
+            // In a real implementation, this would connect to Oracle APEX/REST services
+        });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Contact form would be submitted to Oracle backend in production.');
+            // In a real implementation, this would connect to Oracle APEX/REST services
+        });
+        
+        // Speaker bio modals (placeholder for SweetAlert2 integration)
+        const bioButtons = document.querySelectorAll('.speaker-bio-btn');
+        bioButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const speakerName = button.parentElement.querySelector('.speaker-name').textContent;
+                alert(`Bio modal for ${speakerName} would appear here. In production, this would use SweetAlert2.`);
+            });
+        });
+    </script>
+</body>
+</html>
